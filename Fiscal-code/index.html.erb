@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Codice Fiscales</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Date of birth</th>
+      <th>Birth place</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @codice_fiscales.each do |codice_fiscale| %>
+      <tr>
+        <td><%= codice_fiscale.first_name %></td>
+        <td><%= codice_fiscale.last_name %></td>
+        <td><%= codice_fiscale.date_of_birth %></td>
+        <td><%= codice_fiscale.birth_place %></td>
+        <td><%= link_to 'Show', codice_fiscale %></td>
+        <td><%= link_to 'Edit', edit_codice_fiscale_path(codice_fiscale) %></td>
+        <td><%= link_to 'Destroy', codice_fiscale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Codice fiscale', new_codice_fiscale_path %>
+
+
+
