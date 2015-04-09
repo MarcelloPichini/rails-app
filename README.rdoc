@@ -1,0 +1,4 @@
+The app work with mysql.
+with this application you can create an user and save his data only if you log up.
+I use ruby on rails.
+
